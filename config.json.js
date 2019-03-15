@@ -1,9 +1,8 @@
 {
-    "build_date": "2017-05-03_19:15:58", 
-    "description": "godaddy ddns！", 
-    "home_url": "Module_gdddns.asp", 
-    "md5": "1a944c2d9d952160ea3908d3370df849", 
-    "module": "gdddns", 
-    "title": "gdddns", 
-    "version": "1.0.1"
+    "description": "CloudFlare ddns！", 
+    "home_url": "Module_cfddns.asp", 
+    "md5": "efbce46c442ba9c1337f24394a1aa5d9", 
+    "module": "cfddns", 
+    "title": "cfddns", 
+    "version": "1.0.0"
 }

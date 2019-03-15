@@ -7,7 +7,7 @@
         <meta http-equiv="Expires" content="-1" />
         <link rel="shortcut icon" href="images/favicon.png" />
         <link rel="icon" href="images/favicon.png" />
-        <title>Godaddy DDNS</title>
+        <title>CloudFlare DDNS</title>
         <link rel="stylesheet" type="text/css" href="index_style.css" />
         <link rel="stylesheet" type="text/css" href="form_style.css" />
         <link rel="stylesheet" type="text/css" href="usp_style.css" />
@@ -40,19 +40,19 @@
                                                     <tr>
                                                         <td bgcolor="#4D595D" colspan="3" valign="top">
                                                             <div>&nbsp;</div>
-                                                            <div style="float:left;" class="formfonttitle" style="padding-top: 12px">Godaddy DDNS - 设置</div>
+                                                            <div style="float:left;" class="formfonttitle" style="padding-top: 12px">CloudFlare DDNS - 设置</div>
                                                             <div style="float:right; width:15px; height:25px;margin-top:10px"><img id="return_btn" onclick="reload_Soft_Center();" align="right" style="cursor:pointer;position:absolute;margin-left:-30px;margin-top:-25px;" title="返回软件中心" src="/images/backprev.png" onMouseOver="this.src='/images/backprevclick.png'" onMouseOut="this.src='/images/backprev.png'"></img></div>
                                                             <div style="margin-left:5px;margin-top:10px;margin-bottom:10px"><img src="/images/New_ui/export/line_export.png"></div>
-                                                            <div class="SimpleNote" id="head_illustrate"><i></i><em>Godaddy DDNS</em>是基于 Godaddy API 实现的个人 DDNS 工具。<a href='https://github.com/mritd/koolshare-gdddns' target='_blank'><i>&nbsp;&nbsp;<u>点击查看插件详情</u></i></a></div>
+                                                            <div class="SimpleNote" id="head_illustrate"><i></i><em>CloudFlare DDNS</em>是基于 CloudFlare API 实现的个人 DDNS 工具。<a href='https://github.com/geek5nan/koolshare-cfddns' target='_blank'><i>&nbsp;&nbsp;<u>点击查看插件详情</u></i></a></div>
                                                             <table style="margin:20px 0px 0px 0px;" width="100%" border="1" align="center" cellpadding="4" cellspacing="0" bordercolor="#6b8fa3" class="FormTable">
                                                                 <thead>
                                                                     <tr>
-                                                                        <td colspan="2">Godaddy DDNS - 设置面板</td>
+                                                                        <td colspan="2">CloudFlare DDNS - 设置面板</td>
                                                                     </tr>
                                                                 </thead>
                                                                 <tbody>
                                                                     <tr id="switch_tr">
-                                                                        <th> <label>开启 Godaddy DDNS</label> </th>
+                                                                        <th> <label>开启 CloudFlare DDNS</label> </th>
                                                                         <td colspan="2">
                                                                             <div class="switch_field" style="display:table-cell">
                                                                                 <label for="switch">
@@ -70,39 +70,47 @@
                                                                     </tr>
                                                                     <tr id="last_act_tr">
                                                                         <th>上次运行</th>
-                                                                        <td> <% dbus_get_def("gdddns_last_act", "--"); %> </td>
+                                                                        <td> <% dbus_get_def("cfddns_last_act", "--"); %> </td>
                                                                     </tr>
                                                                     <tr id="key_tr">
                                                                         <th>API KEY</th>
-                                                                        <td> <input type="text" id="gdddns_key" value="<% dbus_get_def("gdddns_key", ""); %>" class="input_ss_table"></td>
+                                                                        <td> <input type="text" id="cfddns_key" value="<% dbus_get_def("cfddns_key", ""); %>" class="input_ss_table"></td>
                                                                     </tr>
-                                                                    <tr id="secret_tr">
-                                                                        <th>API Secret</th>
-                                                                        <td><input type="password" id="gdddns_secret" value="<% dbus_get_def("gdddns_secret", ""); %>" class="input_ss_table"></td>
+                                                                    <tr id="email_tr">
+                                                                        <th>Email</th>
+                                                                        <td><input type="text" id="cfddns_email" value="<% dbus_get_def("cfddns_email", ""); %>" class="input_ss_table"></td>
+                                                                    </tr>
+                                                                    <tr id="zone_id_tr">
+                                                                        <th>ZoneId</th>
+                                                                        <td><input type="text" id="cfddns_zone_id" value="<% dbus_get_def("cfddns_zone_id", ""); %>" class="input_ss_table"></td>
+                                                                    </tr>
+                                                                    <tr id="record_id_tr">
+                                                                        <th>RecordId</th>
+                                                                        <td><input type="text" id="cfddns_record_id" value="<% dbus_get_def("cfddns_record_id", ""); %>" class="input_ss_table"></td>
                                                                     </tr>
                                                                     <tr id="interval_tr">
                                                                         <th>检查周期</th>
-                                                                        <td><input type="text" style="width: 2.5em" id="gdddns_interval" value="<% dbus_get_def("gdddns_interval", "120"); %>" class="input_ss_table">s</td>
+                                                                        <td><input type="text" style="width: 2.5em" id="cfddns_interval" value="<% dbus_get_def("cfddns_interval", "120"); %>" class="input_ss_table">s</td>
                                                                     </tr>
                                                                     <tr id="name_tr">
                                                                         <th>域名</th>
                                                                         <td> 
-                                                                            <input type="text" style="width: 4em" id="gdddns_name" placeholder="子域名" value="<% dbus_get_def("gdddns_name", "home"); %>" class="input_ss_table">.<input type="text" id="gdddns_domain" placeholder="主域名" value="<% dbus_get_def("gdddns_domain", "example.com"); %>" class="input_ss_table">
+                                                                            <input type="text" style="width: 4em" id="cfddns_name" placeholder="子域名" value="<% dbus_get_def("cfddns_name", "home"); %>" class="input_ss_table">.<input type="text" id="cfddns_domain" placeholder="主域名" value="<% dbus_get_def("cfddns_domain", "example.com"); %>" class="input_ss_table">
                                                                         </td>
                                                                     </tr>
                                                                     <tr id="dns_tr">
                                                                         <th title="查询域名 IP 变更的 DNS 服务器，默认为 114 DNS">DNS服务器(?)</th>
                                                                         <td>
-                                                                            <input id="gdddns_dns" class="input_ss_table" value="<% dbus_get_def("gdddns_dns", "114.114.114.114"); %>">
+                                                                            <input id="cfddns_dns" class="input_ss_table" value="<% dbus_get_def("cfddns_dns", "114.114.114.114"); %>">
                                                                         </td>
                                                                     </tr>
                                                                     <tr id="curl_tr">
                                                                         <th title="可自行修改命令行，以获得正确的公网IP。如添加 '--interface vlan2' 以指定多播情况下的端口支持">获得IP命令(?)</th>
-                                                                        <td><textarea id="gdddns_curl" class="input_ss_table" style="width: 94%; height: 2.4em"><% dbus_get_def("gdddns_curl", "curl -s whatismyip.akamai.com"); %></textarea></td>
+                                                                        <td><textarea id="cfddns_curl" class="input_ss_table" style="width: 94%; height: 2.4em"><% dbus_get_def("cfddns_curl", "curl -s whatismyip.akamai.com"); %></textarea></td>
                                                                     </tr>
                                                                     <tr id="ttl_tr">
                                                                         <th title="设置解析TTL，默认10分钟，免费版的范围是600-86400">TTL(?)</th>
-                                                                        <td><input id="gdddns_ttl" style="width: 4.5em" class="input_ss_table"value="<% dbus_get_def("gdddns_ttl", "600"); %>">s (1~86400)</td>
+                                                                        <td><input id="cfddns_ttl" style="width: 4.5em" class="input_ss_table"value="<% dbus_get_def("cfddns_ttl", "600"); %>">s (1~86400)</td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
@@ -137,29 +145,29 @@
         <script>
             $(function () {
                 show_menu(menu_hook);
-                var enable = "<% dbus_get_def("gdddns_enable", "0"); %>";
+                var enable = "<% dbus_get_def("cfddns_enable", "0"); %>";
                 $('#switch').prop('checked', enable === "1");
                 buildswitch();
                 update_visibility();
                 var posting = false;
-            	var inputs = ['key', 'secret', 'name', 'domain', 'interval', 'dns', 'curl', 'ttl'];
+            	var inputs = ['key', 'email', 'zone_id', 'record_id', 'interval', 'name', 'domain', 'dns', 'curl', 'ttl'];
                 $('.button_gen').click(function () {
                     if(posting) return;
                     posting = true; // save
             		var data = {
-            			gdddns_enable: $('#switch').prop('checked') | 0,
+            			cfddns_enable: $('#switch').prop('checked') | 0,
             			action_mode: ' Refresh ',
-            			current_page: 'Module_gdddns.asp',
-            			next_page: 'Module_gdddns.asp',
-            			SystemCmd: 'gdddns_config.sh'
+            			current_page: 'Module_cfddns.asp',
+            			next_page: 'Module_cfddns.asp',
+            			SystemCmd: 'cfddns_config.sh'
             		};
             		for(var i = 0; i< inputs.length; i++) {
-            			var key = 'gdddns_' + inputs[i];
+            			var key = 'cfddns_' + inputs[i];
             			data[key] = $('#'+key).val()
             		}
                     $.ajax({
                         type: 'POST',
-                        url: 'applydb.cgi?p=gdddns_',
+                        url: 'applydb.cgi?p=cfddns_',
                         data: $.param(data)
                     }).then(function () {
                         posting = false;
@@ -172,8 +180,8 @@
             })
 
             function menu_hook(title, tab) {
-                tabtitle[tabtitle.length -1] = new Array("", "Godaddy DDNS");
-                tablink[tablink.length -1] = new Array("", "Module_gdddns.asp");
+                tabtitle[tabtitle.length -1] = new Array("", "CloudFlare DDNS");
+                tablink[tablink.length -1] = new Array("", "Module_cfddns.asp");
             }
             
             function reload_Soft_Center(){
@@ -191,7 +199,9 @@
                 if (document.getElementById('switch').checked) {
                     document.getElementById("last_act_tr").style.display = "";
                     document.getElementById("key_tr").style.display = "";
-                    document.getElementById("secret_tr").style.display = "";
+                    document.getElementById("email_tr").style.display = "";
+                    document.getElementById("zone_id_tr").style.display = "";
+                    document.getElementById("record_id_tr").style.display = "";
                     document.getElementById("interval_tr").style.display = "";
                     document.getElementById("name_tr").style.display = "";
                     document.getElementById("dns_tr").style.display = "";
@@ -201,7 +211,9 @@
                 } else {
                     document.getElementById("last_act_tr").style.display = "none";
                     document.getElementById("key_tr").style.display = "none";
-                    document.getElementById("secret_tr").style.display = "none";
+                    document.getElementById("email_tr").style.display = "none";
+                    document.getElementById("zone_id_tr").style.display = "none";
+                    document.getElementById("record_id_tr").style.display = "none";
                     document.getElementById("interval_tr").style.display = "none";
                     document.getElementById("name_tr").style.display = "none";
                     document.getElementById("dns_tr").style.display = "none";
