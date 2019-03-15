@@ -18,3 +18,11 @@ API Key|c2547eb745079dac9320b638f5e225cf483cc5cfdda41|Global API Key
 Email|user@example.com|账户邮箱
 Zone Id|023e105f4ecef8ad9ca31a8372d0c353|域名ID
 Record ID|372e67954025e0ba6aaa6d586b9e0b59|DNS记录ID
+
+## 下载
+
+[cfddns](https://github.com/geek5nan/koolshare-cfddns/releases)
+
+## 安装
+
+在软件中心使用离线安装方式安装
