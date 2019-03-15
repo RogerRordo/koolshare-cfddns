@@ -1,5 +1,6 @@
-Koolshare Asuswrt-Merlin koolproxy Changelog
+Koolshare Asuswrt-Merlin cfddns Changelog
 ===========================================
 
 1.0.0
-   -add	add gddns for merlin xiaobao firmware
+   -将gdddns修改为cloudflare版本
+
