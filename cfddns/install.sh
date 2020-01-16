@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [[ `dbus version|awk -F " " '{print $NF}'` !=  "3.0.0" ]]; then
+    echo "dbus version (`dbus version|awk -F " " '{print $NF}'`) is not supported now, please contact the developer!"
+    exit
+fi
+
 cp -r /tmp/cfddns/res/* /koolshare/res
 cp -r /tmp/cfddns/scripts/* /koolshare/scripts
 cp -r /tmp/cfddns/webs/* /koolshare/webs
