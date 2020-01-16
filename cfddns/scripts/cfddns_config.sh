@@ -1,7 +1,8 @@
 #!/bin/sh
 
 if [ "`dbus get cfddns_enable`" == "1" ]; then
-    dbus delay cfddns_timer `dbus get cfddns_interval` /koolshare/scripts/cfddns_update.sh
+    cru a cfddns_update "*/`dbus get cfddns_interval` * * * * /koolshare/scripts/cfddns_update.sh"
+    sh /koolshare/scripts/cfddns_update.sh
 else
-    dbus remove __delay__cfddns_timer
+	cru d cfddns_update
 fi

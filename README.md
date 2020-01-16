@@ -2,13 +2,11 @@
 
 ## 简介 
 
-这是一个适用于梅林固件(koolshare) 的 CloudFlare DDNS 插件，基于 [gdddns](https://github.com/mritd/koolshare-gdddns) 修改
+这是一个适用于梅林固件(koolshare) 的 [CloudFlare](https://www.cloudflare.com/) DDNS 插件，基于 [gdddns](https://github.com/mritd/koolshare-gdddns) 修改而来
 
 ## 插件使用
-
-- 首先自己的域名需要托管在 [CloudFlare](https://www.cloudflare.com/)
-- 在 [CloudFlare Profile](https://dash.cloudflare.com/profile) 中获取Global API Key
-- 安装本插件，填入对应参数即可
+固件版本为   **380.70-X7.9.1** 的，请使用 cfddns 1.1.0 版本
+固件版本低于 **380.70-X7.9.1** 的，请使用 cfddns 1.0.0 版本
 
 CloudFlare参数列表
 
