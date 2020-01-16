@@ -1,6 +1,9 @@
 Koolshare Asuswrt-Merlin cfddns Changelog
 ===========================================
 
+1.1.0
+   -适配 380.70-X7.9.1 版本
+
 1.0.0
    -将gdddns修改为cloudflare版本
 

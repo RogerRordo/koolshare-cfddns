@@ -1,8 +1,8 @@
 {
     "description": "CloudFlare ddns！", 
     "home_url": "Module_cfddns.asp", 
-    "md5": "efbce46c442ba9c1337f24394a1aa5d9", 
+    "md5": "4a4b14251466730ad48bfc39f2f462d1", 
     "module": "cfddns", 
     "title": "cfddns", 
-    "version": "1.0.0"
+    "version": "1.1.0"
 }
