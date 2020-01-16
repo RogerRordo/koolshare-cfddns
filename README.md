@@ -5,8 +5,9 @@
 这是一个适用于梅林固件(koolshare) 的 [CloudFlare](https://www.cloudflare.com/) DDNS 插件，基于 [gdddns](https://github.com/mritd/koolshare-gdddns) 修改而来
 
 ## 插件使用
-固件版本为   **380.70-X7.9.1** 的，请使用 cfddns 1.1.0 版本
-固件版本低于 **380.70-X7.9.1** 的，请使用 cfddns 1.0.0 版本
+
+* 固件版本为   **380.70-X7.9.1** 的，请使用 cfddns 1.1.0 版本
+* 固件版本低于 **380.70-X7.9.1** 的，请使用 cfddns 1.0.0 版本
 
 CloudFlare参数列表
 
