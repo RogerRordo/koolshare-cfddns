@@ -90,7 +90,7 @@
                                                                     </tr>
                                                                     <tr id="interval_tr">
                                                                         <th>检查周期</th>
-                                                                        <td><input type="text" style="width: 2.5em" id="cfddns_interval" value="<% dbus_get_def("cfddns_interval", "120"); %>" class="input_ss_table">s</td>
+                                                                        <td><input type="text" style="width: 2.5em" id="cfddns_interval" value="<% dbus_get_def("cfddns_interval", "5"); %>" class="input_ss_table">分钟</td>
                                                                     </tr>
                                                                     <tr id="name_tr">
                                                                         <th>域名</th>
@@ -109,8 +109,8 @@
                                                                         <td><textarea id="cfddns_curl" class="input_ss_table" style="width: 94%; height: 2.4em"><% dbus_get_def("cfddns_curl", "curl -s whatismyip.akamai.com"); %></textarea></td>
                                                                     </tr>
                                                                     <tr id="ttl_tr">
-                                                                        <th title="设置解析TTL，默认10分钟，免费版的范围是600-86400">TTL(?)</th>
-                                                                        <td><input id="cfddns_ttl" style="width: 4.5em" class="input_ss_table"value="<% dbus_get_def("cfddns_ttl", "600"); %>">s (1~86400)</td>
+                                                                        <th title="设置解析TTL，默认10分钟，免费版的范围是120-86400">TTL(?)</th>
+                                                                        <td><input id="cfddns_ttl" style="width: 4.5em" class="input_ss_table"value="<% dbus_get_def("cfddns_ttl", "120"); %>">s (120~86400)</td>
                                                                     </tr>
                                                                 </tbody>
                                                             </table>
