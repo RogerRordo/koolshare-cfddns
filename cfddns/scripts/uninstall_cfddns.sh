@@ -10,3 +10,6 @@ rm /koolshare/scripts/uninstall_cfddns.sh > /dev/null 2>&1
 dbus remove softcenter_module_cfddns_install
 dbus remove softcenter_module_cfddns_version
 dbus remove softcenter_module_cfddns_description
+
+# remove start up command
+sed -i '/cfddns_config.sh/d' /jffs/scripts/wan-start >/dev/null 2>&1

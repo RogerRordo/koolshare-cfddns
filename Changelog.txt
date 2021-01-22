@@ -1,6 +1,9 @@
 Koolshare Asuswrt-Merlin cfddns Changelog
 ===========================================
 
+1.1.2
+   -修复重启后插件失效的问题(见https://github.com/geek5nan/koolshare-cfddns/issues/5)
+
 1.1.1
    -修复版本插件不匹配的问题
 
